@@ -1,0 +1,37 @@
+******* PROJECT INFO *******
+
+Project Name - Home Budget App
+Code Editor - VS Code
+Tech stack - React, vite.
+Storage - Browser Local Storage.
+Package Manager - NPM.
+Asset Designing Tool - Canva.
+Fonts API - Google Fonts.
+starting point of Project - main.jsx. (target div#root in index.html)
+Global component of project - App.jsx. (all our components will met here)
+Static / Public dir - Public.
+Assets - src/assets.
+Brain of our project - /src.
+
+
+******* THIRD PARTY MODULES/PACKAGES *******
+
+react - to create a react App.
+react-router-dom - to set up router in our app.
+
+
+******* FLOW ********
+
+=> index.html - basic boiler plate and div with the id 'root', and all out code will be injected inside this div.
+
+=> main.jsx - (starting point of our app) - here we are targeting that div with the id root and populating it with our code.
+
+=> app.jsx - (global component of our app) - for achieving modularity in our project we are dividing our code into pices called modules, and all our modules will met inside our global component i.e app.jsx. also this app.jsx is used in our main.jsx.
+
+=> As we want to load different component or element for different route, we need to impleament 'React-Router-Dom'
+    -> path : specifies the url we want to hit.
+    -> element : specifies which element or component will load for that path.
+    -> loader : specifies what data will be loaded.
+        -> As we are using browser local storage to store our data locally so to communicate with the local storage, we need a global helper function (helpers.js) and implement the logic for local storage here.
+    -> errorElement : specifies that if an error occure say invalid path so we need to display our custom error component to the users. 
+    -> action : specifies what to do when a component will load.
